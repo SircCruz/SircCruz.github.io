@@ -26,7 +26,7 @@ function FadeInDivs(){
     }
     var skills = document.getElementById("skills").getBoundingClientRect().top + window.scrollY;
     if (currentScroll > skills){
-        document.getElementById("skills").className = "skills divfadein";
+        document.getElementById("skills").className = "skills divfadein2";
         setInterval(function() {document.getElementById("skill1").className = "divfadein"}, 100);
         setInterval(function() {document.getElementById("skill2").className = "divfadein"}, 200);
         setInterval(function() {document.getElementById("skill3").className = "divfadein"}, 300);
@@ -40,7 +40,7 @@ function FadeInDivs(){
     }
     var stats = document.getElementById("stats").getBoundingClientRect().top + window.scrollY;
     if (currentScroll > stats){
-        document.getElementById("stats").className = "divfadein";
+        document.getElementById("stats").className = "divfadein2";
     }
     var slideshow = document.getElementById("slideshow").getBoundingClientRect().top + window.scrollY;
     currentScroll = window.scrollY + window.scrollY * 0.4;
