@@ -22,7 +22,7 @@ function FadeInDivs(){
     var content = document.getElementById("content").getBoundingClientRect().top + window.scrollY;
     currentScroll = window.scrollY + window.scrollY * 0.8;
     if (currentScroll > content){
-        document.getElementById("content").className = "content divfadein";
+        document.getElementById("content").className = "content divfadein2";
     }
     var skills = document.getElementById("skills").getBoundingClientRect().top + window.scrollY;
     if (currentScroll > skills){
