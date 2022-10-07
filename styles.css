@@ -1160,17 +1160,24 @@ body>.fullscreen{
     .bg{
         width: 100%;
     }
+    .introduction .description{
+        letter-spacing: unset;
+        margin: 5px 0;
+    }
     .portfolio{
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
+        padding: 10px;
         box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
     }
     .about .card_content{
         justify-content: center;
     }
     .about .card._1{
+        transform: translateY(-40px);
         width: 100%;
+        height: 500px;
         padding-bottom: 20px;
     }
     .about .card._2{
@@ -1179,14 +1186,14 @@ body>.fullscreen{
         padding-left: calc(-3.75%);
     }
     .about .card .subcard._1{
-        transform: translateY(55px);
+        transform: translateY(-30px);
     }
     .about .card .subcard._1 .svgskills{
         overflow-x: scroll;
         width: 100%;
     }
     .about .card .subcard._2{
-        transform: translateY(70px);
+        transform: translateY(-20px);
         width: 100%;
     }
     .about .content .btn_resume{
@@ -1203,13 +1210,14 @@ body>.fullscreen{
         transform: translateY(2px);
     }
     .projects{
-        margin-top: 1100px;
+        margin-top: 1010px;
     }
     .projects .card .subcard, .samples .card .subcard{
+        transform: translateY(-35px);
         width: 100%;
     }
     .projects .card .subcard._1, .samples .card .subcard._1{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .projects .subcard .img-slideshow, .samples .subcard .img-slideshow{
         width: 380px;
@@ -1221,13 +1229,14 @@ body>.fullscreen{
         margin-top: 28px;
     }
     .samples{
-        margin-top: 1130px;
+        margin-top: 1060px;
     }
     .contact{
-        margin-top: 1140px;
+        margin-top: 1060px;
     }
     .contact .details{
-        margin: 20px 3px;
+        transform: translateY(-35px);
+        margin: 0px 3px;
     }
     .contact .btn_form{
         padding: 7.5px 25px;
@@ -1236,7 +1245,7 @@ body>.fullscreen{
         transform: scale(0.5);
     }
     .footer{
-        top: 4480px;
+        top: 4280px;
     }
     .footer .footer-container, .footer .footer-contacts, .footer p, .footer .footer-link{
         left: 50%;
