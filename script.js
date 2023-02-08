@@ -18,6 +18,34 @@ var scrollFunction = function(){
     }
     FadeInDivs();
 }
+function Readmore(content){
+    var dots;
+    var button;
+    var content;
+    if(content == "aboutme"){
+        dots = document.getElementById("aboutme_dots");
+        button = document.getElementById("aboutme_btnreadmore");
+        content = document.getElementById("aboutme_readmore");
+    }
+    else if(content == "cryofgaia"){
+        dots = document.getElementById("cry_dots");
+        button = document.getElementById("cry_btnreadmore");
+        content = document.getElementById("cry_readmore");
+    }
+    else if(content == "sirccruz"){
+        dots = document.getElementById("sirc_dots");
+        button = document.getElementById("sirc_btnreadmore");
+        content = document.getElementById("sirc_readmore");
+    }
+    else if(content == "socialmedia"){
+        dots = document.getElementById("social_dots");
+        button = document.getElementById("social_btnreadmore");
+        content = document.getElementById("social_readmore");
+    }
+    dots.style.display = "none";
+    content.style.display = "inline";
+    button.style.display = "none";
+}
 function FadeInDivs(){
     var content = document.getElementById("content").getBoundingClientRect().top + window.scrollY;
     currentScroll = window.scrollY + window.scrollY * 0.8;

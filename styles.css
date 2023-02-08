@@ -547,6 +547,14 @@ body>.fullscreen{
     padding: 0px 5px;
     z-index: 2;
 }
+#aboutme_readmore, #cry_readmore, #sirc_readmore, #social_readmore{
+    display: none;
+}
+.btnreadmore{
+    border: none;
+    font-style: italic;
+    opacity: 0.8;
+}
 .about .card._1{
     float: left;
 }
