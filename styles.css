@@ -608,6 +608,7 @@ body>.fullscreen{
 }
 .about .card .content .btn_resume svg{
     transform: translateY(7.5px);
+    fill: #eee;
 }
 .divfadein{
     animation: divfadein 0.5s forwards;
@@ -648,11 +649,6 @@ body>.fullscreen{
 }
 .about .card .content .btn_resume:active::before, .contact .btn_form:active::before{
     background-image: linear-gradient(rgba(0,0,0,0)0%, rgba(0,0,0,0) 100%);
-}
-.about .verticalrule{
-    position: absolute;
-    left: 49%;
-    transform: translate(-49%, 230px) rotate(90deg);
 }
 #skill1, #skill2, #skill3, #skill4, #skill5, #skill6, #skill7, #skill8, #skill9, #skill10{
     opacity: 0;
@@ -975,6 +971,7 @@ body>.fullscreen{
 .contact .details{
     position: relative;
     text-align: justify;
+    line-height: 20px;
     margin: 20px 10% 0 10%;
     padding: 20px;
     background-color: #495b49;
@@ -982,29 +979,9 @@ body>.fullscreen{
     box-shadow: 0px 0px 1px 1px #121212;
     z-index: 1;
 }
-.contact .details::before{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 100%);
-    border-radius: 7.5px;
-    content: ' ';
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 98.5%;
-    height: 10%;
-    z-index: 0;
-}
-.contact .details::after{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 100%);
-    border-radius: 7.5px;
-    content: ' ';
-    position: absolute;
-    top: 403px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 98.5%;
-    height: 10%;
-    z-index: 0;
+.contact .details h4{
+    margin-top: 10px;
+    line-height: 15px;
 }
 .contact .details .messageform{
     position: relative;
@@ -1048,7 +1025,7 @@ body>.fullscreen{
 }
 .contact .btn_form{
     position: relative;
-    background-image: linear-gradient(to bottom,#495b49 0%, #495b49 90%, #243b24 100%);
+    background-image: linear-gradient(to bottom,#4f634f 0%, #4f634f 80%, #243b24 100%);
     padding: 15px 50px 15px 50px;
     margin: 30px 0 5px 0;
     border: none;
@@ -1059,20 +1036,6 @@ body>.fullscreen{
 }
 .contact .btn_form:hover{
     cursor: pointer;
-}
-.contact .btn_form::before{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 100%);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    content: ' ';
-    position: absolute;
-    width: 95%;
-    top: 5px;
-    left: 5px;
-    height: 50%;
-    z-index: 0;
 }
 .contact .btn_form svg{
     display: flex;
@@ -1179,6 +1142,21 @@ body>.fullscreen{
         padding: 10px;
         box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
     }
+    .header{
+        background-image: none;
+        box-shadow: none;
+        width: unset;
+        transform: translateX(0);
+    }
+    .header::before{
+        background-image: none;
+        border: none;
+    }
+    .header h1, .header h4{
+        color: #121212;
+        text-shadow: none;
+        text-align: center;
+    }
     .about .card_content{
         justify-content: center;
     }
@@ -1187,11 +1165,17 @@ body>.fullscreen{
         width: 100%;
         height: 500px;
         padding-bottom: 20px;
+        border: none;
+        box-shadow: none;
     }
     .about .card._2{
         width: 100%;
         border: none;
         padding-left: calc(-3.75%);
+    }
+    .about .card .subcard{
+        box-shadow: none;
+        border: none;
     }
     .about .card .subcard._1{
         transform: translateY(-30px);
@@ -1205,7 +1189,18 @@ body>.fullscreen{
         width: 100%;
     }
     .about .content .btn_resume{
-        transform: translateY(45px);
+        background-image: none !important;
+        color: #121212 !important;
+        box-shadow: none !important;
+        padding: unset !important;
+        text-decoration: underline;
+    }
+    .about .content .btn_resume::before{
+        background-image: none !important;
+        border: none !important;
+    }
+    .about .content .btn_resume svg{
+        fill: #121212 !important;
     }
     .about .card._2 .subcard .svgskills{
         padding: 40px 0 40px 0;
@@ -1218,11 +1213,22 @@ body>.fullscreen{
         transform: translateY(2px);
     }
     .projects{
-        margin-top: 1010px;
+        margin-top: 1100px;
     }
     .projects .card .subcard, .samples .card .subcard{
         transform: translateY(-35px);
         width: 100%;
+        border: none;
+        box-shadow: none;
+        background-image: none;
+    }
+    .projects .card .subcard::before, .samples .card .subcard::before{
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0);
+        border-top: none;
+    }
+    .projects .card .subcard::after, .samples .card .subcard::after{
+        background-image: none;
     }
     .projects .card .subcard._1, .samples .card .subcard._1{
         margin-bottom: 10px;
@@ -1236,11 +1242,35 @@ body>.fullscreen{
     .projects .subcard .title h1, .samples .subcard .title h1{
         margin-top: 28px;
     }
+    .projects .subcard .options a, .samples .subcard .options a{
+        margin: unset;
+        margin-top: 50px;
+        padding: 5px;
+        border: unset;
+        background-image: unset;
+        transform: unset
+    } 
+    .projects .subcard .options a::before, .samples .subcard .options a::before{
+        background-image: unset;
+        transition: unset;
+    }
+    .projects .subcard .options a:active, .samples .subcard .options a:active{
+        background-image: unset
+    }
+    .projects .subcard .options svg, .samples .subcard .options svg{
+        fill: #121212;
+    }
+    .projects .subcard .options, .samples .subcard .options{
+        margin: unset;
+    }
+    .projects .subcard .options a:active::before, .samples .subcard .options a:active::before{
+        background-image: unset;
+    }
     .samples{
-        margin-top: 1060px;
+        margin-top: 1010px;
     }
     .contact{
-        margin-top: 1060px;
+        margin-top: 1010px;
     }
     .contact .details{
         transform: translateY(-35px);
@@ -1248,12 +1278,13 @@ body>.fullscreen{
     }
     .contact .btn_form{
         padding: 7.5px 25px;
+        font-size: 15px;
     }
     .contact .btn_form::placeholder{
         transform: scale(0.5);
     }
     .footer{
-        top: 4280px;
+        top: 4100px;
     }
     .footer .footer-container, .footer .footer-contacts, .footer p, .footer .footer-link{
         left: 50%;
@@ -1333,14 +1364,14 @@ body>.fullscreen{
 }
 @media (min-width: 1060px){
     .portfolio{
-        left: 50%; /*60%*/
-        width: 1000px; /*60vw*/
-        transform: translateX(-50%) /*40%*/;
+        left: 50%;
+        width: 1000px;
+        transform: translateX(-50%);
     }
 }
 @media (min-width: 1481px){
     .portfolio{
-        left: 50%; /*460px*/
-        transform: translateX(-50%); /*0px*/
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
