@@ -376,6 +376,9 @@ a{
     .introduction .title, .introduction .description{
         font-size: 6vw;
     }
+    .introduction .title, .introduction .description, .introduction .greeting{
+        line-height: 40px;
+    }
 }
 @keyframes shrinkanim {
     from{
@@ -1135,6 +1138,17 @@ body>.fullscreen{
         letter-spacing: unset;
         margin: 5px 0;
     }
+    .introduction svg{
+        width: 25px;
+        height: 25px;
+        transform: translate(3px, 3px);
+    }
+    .introduction svg:active{
+        transform: translate(3px, 5px);
+    }
+    .introduction a{
+        padding: 15px 10px;
+    }
     .portfolio{
         left: 50%;
         transform: translateX(-50%);
@@ -1159,6 +1173,9 @@ body>.fullscreen{
     }
     .about .card_content{
         justify-content: center;
+    }
+    .about .card .content .desc{
+        height: auto;
     }
     .about .card._1{
         transform: translateY(-40px);
@@ -1241,6 +1258,9 @@ body>.fullscreen{
     }
     .projects .subcard .title h1, .samples .subcard .title h1{
         margin-top: 28px;
+    }
+    .projects .subcard .desc, .samples .subcard .desc{
+        height: auto;
     }
     .projects .subcard .options a, .samples .subcard .options a{
         margin: unset;
