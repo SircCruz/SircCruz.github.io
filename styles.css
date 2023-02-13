@@ -692,6 +692,11 @@ body>.fullscreen{
 }
 .projects .card, .samples .card{
     opacity: 0;
+    margin-top: 15px;
+}
+/*temporary style until there are two samples*/
+.samples .card._2 .subcard{
+    width: 820px;
 }
 .projects .card .subcard, .samples .card .subcard{
     position: relative;
@@ -1244,6 +1249,9 @@ body>.fullscreen{
     .projects .card .subcard._1, .samples .card .subcard._1{
         margin-bottom: 10px;
     }
+    .samples .card._2 .subcard{
+        width: unset;
+    }
     .projects .subcard .img-slideshow, .samples .subcard .img-slideshow{
         width: 380px;
     }
@@ -1298,7 +1306,7 @@ body>.fullscreen{
         transform: scale(0.5);
     }
     .footer{
-        top: 4100px;
+        top: 4600px;
     }
     .footer .footer-container, .footer .footer-contacts, .footer p, .footer .footer-link{
         left: 50%;
@@ -1369,7 +1377,7 @@ body>.fullscreen{
         margin-top: 45px;
     }
     .footer{
-        top: 2880px;
+        top: 3380px;
     }
     .footer .footer-container, .footer .footer-contacts, .footer p, .footer .footer-link{
         left: 50%;

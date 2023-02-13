@@ -85,6 +85,11 @@ function FadeInDivs(){
         document.getElementById("slideshow3").className = "img-slideshow divfadein2";
         setInterval(function() {document.getElementById("card3").className = "card _1 divfadein"}, 0);
     }
+    var slideshow4 = document.getElementById("slideshow4").getBoundingClientRect().top + window.scrollY;
+    if(currentScroll > slideshow4){
+        document.getElementById("slideshow4").className = "img-slideshow divfadein2";
+        setInterval(function() {document.getElementById("card4").className = "card _2 divfadein"}, 0);
+    }
 }
 
 window.addEventListener("scroll", scrollFunction);
@@ -340,6 +345,45 @@ function imageSet4(){
     }
 }
 imageSet4();
+
+var image5 = 0;
+var temp5 = 0;
+var timeout5;
+function setImg5(img){
+    clearTimeout(timeout5);
+    image5 = img;
+    imageSet5();
+}
+function nextImg5(){
+    if (image5 < 5){
+        clearTimeout(timeout5);
+        imageSet5();
+    }
+}
+function prevImg5(){
+    if(image5 > 1){
+        clearTimeout(timeout5);
+        image5 -= 2;
+        imageSet5();
+    }
+}
+function imageSet5(){
+    try{
+        document.getElementById("set5img" + temp5).className = "inactive btn-page";
+        document.getElementById("set5img" + image5).className = "active btn-page";
+        document.getElementById("set5btn" + temp5).className = "inactive btn-page";
+        document.getElementById("set5btn" + image5).className = "active btn-page";
+        document.getElementById("set5pagenumber").innerText = image5 + 1 + "/5";
+        temp5 = image5;
+        image5++;
+        timeout5 = setTimeout(imageSet5, 5000);
+    }
+    catch{
+        image5 = 0;
+        setTimeout(imageSet5, 0);
+    }
+}
+imageSet5();
 
 var form = document.getElementById("my-form");
     
