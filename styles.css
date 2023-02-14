@@ -1250,7 +1250,7 @@ body>.fullscreen{
         margin-bottom: 10px;
     }
     .samples .card._2 .subcard{
-        width: unset;
+        width: 100%;
     }
     .projects .subcard .img-slideshow, .samples .subcard .img-slideshow{
         width: 380px;
