@@ -6,11 +6,99 @@
     color: #121212;
 }
 body{
-    background-color: #ddd;
+    background-color: #eee;
     z-index: -2;
 
     overflow-y: hidden;
     animation: showScrollBar 1s 4s forwards;
+}
+.darkmode{
+    animation: lighttodark 1s forwards;
+}
+@keyframes lighttodark {
+    from{
+        background-color: #eee;
+    }
+    to{
+        background-color: #1f1f1f;
+    }
+}
+.darkmode2{
+    animation: lighttodark2 1s forwards;
+}
+@keyframes lighttodark2 {
+    from{
+        background-color: #eee;
+    }
+    to{
+        background-color: #3a3a3a;
+    }
+}
+.darkmodep{
+    animation: lighttodarkp 1s forwards;
+}
+@keyframes lighttodarkp {
+    from{
+        color: #eee;
+    }
+    to{
+        color: #121212;
+    }
+}
+.darkmodesvg{
+    animation: lighttodarksvg 1s forwards;
+}
+@keyframes lighttodarksvg {
+    from{
+        fill: #eee;
+    }
+    to{
+        fill: #121212;
+    }
+}
+.lightmode{
+    animation: darktolight 1s forwards;
+}
+@keyframes darktolight {
+    from{
+        background-color: #121212;
+    }
+    to{
+        background-color: #eee;
+    }
+}
+.lightmode2{
+    animation: darktolight 1s forwards;
+}
+@keyframes darktolight {
+    from{
+        background-color: #3a3a3a;
+    }
+    to{
+        background-color: #eee;
+    }
+}
+.lightmodep{
+    animation: darktolightp 1s forwards;
+}
+@keyframes darktolightp {
+    from{
+        color: #121212;
+    }
+    to{
+        color: #ddd;
+    }
+}
+.lightmodesvg{
+    animation: darktolightsvg 1s forwards;
+}
+@keyframes darktolightsvg {
+    from{
+        fill: #121212;
+    }
+    to{
+        fill: #ddd;
+    }
 }
 a{
     text-decoration: none;
@@ -423,6 +511,23 @@ a{
         opacity: 0;
     }
 }
+.viewmodes{
+    top: 1%;
+    right: 1%;
+    z-index: 2;
+    position: fixed;
+}
+.viewmodes button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.viewmodes svg{
+    height: 40px;
+    width: 40px;
+}
+.viewmodes .sun{
+    display: none;
+}
 body>.fullscreen{
     display: none;
     position: fixed;
@@ -469,8 +574,7 @@ body>.fullscreen{
 
     border-radius: 15px;
     background-color: #eee;
-    box-shadow: 0px 0px 1px 1px #121212;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0px #121212;
     z-index: 2;
 }
 .about .card .me{
@@ -548,6 +652,7 @@ body>.fullscreen{
 }
 .btnreadmore{
     border: none;
+    background-color: rgba(0, 0, 0, 0);
     font-style: italic;
     opacity: 0.8;
 }
@@ -560,18 +665,16 @@ body>.fullscreen{
 .about .card .content{
     position: relative;
     text-align: justify;
-    opacity: 0;
+    opacity: 1;
     z-index: 2;
 }
 .about .card .content p{
     position: relative;
     margin: 10px 15px 0 15px;
-    font-size: 15px;
 }
 .about .card .content .desc{
     position: relative;
     font-stretch: condensed;
-    font-size: 17px;
     font-weight: 600;
     height: 130px;
     overflow-y: scroll;
@@ -596,39 +699,15 @@ body>.fullscreen{
     border-bottom-right-radius: 10px;
     content: ' ';
     position: absolute;
-    width: 95%;
     top: 5px;
     left: 5px;
+    right: 5px;
     height: 60%;
     z-index: 0;
 }
 .about .card .content .btn_resume svg{
     transform: translateY(7.5px);
     fill: #eee;
-}
-.divfadein{
-    animation: divfadein 0.5s forwards;
-}
-@keyframes divfadein {
-    from{
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.divfadein2{
-    animation: divfadein2 0.5s forwards;
-}
-@keyframes divfadein2 {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
 }
 .contact .btn_form{
     background-color: rgba(0, 0, 0, 0);
@@ -647,7 +726,7 @@ body>.fullscreen{
     background-image: linear-gradient(rgba(0,0,0,0)0%, rgba(0,0,0,0) 100%);
 }
 #skill1, #skill2, #skill3, #skill4, #skill5, #skill6, #skill7, #skill8, #skill9, #skill10{
-    opacity: 0;
+    opacity: 1;
     margin: 0px 3px;
 }
 .svgskills{
@@ -658,9 +737,10 @@ body>.fullscreen{
 }
 .svgskills .line{
     padding-bottom: 5px;
-    border-bottom: solid 5px #495b49;
+    border-bottom: solid 5px #478347;
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
+    fill: #121212;
 }
 .content h3, .subcard h3{
     margin-bottom: 5px;
@@ -687,10 +767,10 @@ body>.fullscreen{
     font-stretch: normal;
     font-size: 35px;
     text-shadow: 0px 0px 6px rgba(0,0,0, 0.3);
-    color: #495b49;
+    color: #478347;
 }
 .projects .card, .samples .card{
-    opacity: 0;
+    opacity: 1;
     margin-top: 15px;
 }
 /*temporary style until there are two samples*/
@@ -702,9 +782,8 @@ body>.fullscreen{
     display: block;
     float: left;
 
-    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    box-shadow: 0px 0px 1px 1px #121212;
+    box-shadow: 0px 0px 5px 0px #121212;
     background-image: linear-gradient(#eee 0%, #eee 98%, #ddd 100%);
     z-index: 2;
     padding-bottom: 25px;
@@ -957,7 +1036,6 @@ body>.fullscreen{
 }
 .projects .subcard .desc, .samples .subcard .desc{
     font-stretch: condensed;
-    font-size: 17px;
     font-weight: 600;
     height: 70px;
     overflow-y: scroll;
@@ -977,7 +1055,7 @@ body>.fullscreen{
     padding: 20px;
     background-color: #495b49;
     border-radius: 15px;
-    box-shadow: 0px 0px 1px 1px #121212;
+    box-shadow: 0px 0px 5px 0px #121212;
     z-index: 1;
 }
 .contact .details h4{
@@ -1129,6 +1207,9 @@ body>.fullscreen{
     h1{
         font-size: 25px;
     }
+    p{
+        font-size: 15px;
+    }
     .bg{
         width: 100%;
     }
@@ -1153,21 +1234,6 @@ body>.fullscreen{
         width: 90%;
         padding: 10px;
         box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
-    }
-    .header{
-        background-image: none;
-        box-shadow: none;
-        width: unset;
-        transform: translateX(0);
-    }
-    .header::before{
-        background-image: none;
-        border: none;
-    }
-    .header h1, .header h4{
-        color: #121212;
-        text-shadow: none;
-        text-align: center;
     }
     .about .card_content{
         justify-content: center;
@@ -1204,18 +1270,8 @@ body>.fullscreen{
         width: 100%;
     }
     .about .content .btn_resume{
-        background-image: none !important;
-        color: #121212 !important;
-        box-shadow: none !important;
-        padding: unset !important;
-        text-decoration: underline;
-    }
-    .about .content .btn_resume::before{
-        background-image: none !important;
-        border: none !important;
-    }
-    .about .content .btn_resume svg{
-        fill: #121212 !important;
+        margin-top: 10px;
+        transform: scale(0.8) translateX(-25px);
     }
     .about .card._2 .subcard .svgskills{
         padding: 40px 0 40px 0;
@@ -1291,7 +1347,7 @@ body>.fullscreen{
         margin-top: 1010px;
     }
     .contact{
-        margin-top: 1010px;
+        margin-top: 1460px;
     }
     .contact .details{
         transform: translateY(-35px);
@@ -1303,6 +1359,9 @@ body>.fullscreen{
     }
     .contact .btn_form::placeholder{
         transform: scale(0.5);
+    }
+    .contact input::placeholder, .contact textarea::placeholder{
+        font-size: 15px;
     }
     .footer{
         top: 4600px;
@@ -1388,6 +1447,9 @@ body>.fullscreen{
         left: 50%;
         width: 1000px;
         transform: translateX(-50%);
+    }
+    p{
+        font-size: 17px;
     }
 }
 @media (min-width: 1481px){

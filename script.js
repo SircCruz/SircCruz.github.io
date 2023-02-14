@@ -16,7 +16,6 @@ var scrollFunction = function(){
     else{
         document.getElementById("navigation").className = "navigation fadeout";
     }
-    FadeInDivs();
 }
 function Readmore(content){
     var dots;
@@ -46,49 +45,48 @@ function Readmore(content){
     content.style.display = "inline";
     button.style.display = "none";
 }
-function FadeInDivs(){
-    var content = document.getElementById("content").getBoundingClientRect().top + window.scrollY;
-    currentScroll = window.scrollY + window.scrollY * 0.8;
-    if (currentScroll > content){
-        document.getElementById("content").className = "content divfadein2";
+var isDarkmode = false;
+function SetViewMode(){
+    document.body.style.overflowY = "scroll";
+    if(!isDarkmode){
+        document.getElementById("body").className = "darkmode";
+        document.getElementById("sun").style.display = "block";
+        document.getElementById("moon").style.display = "none";
+        document.getElementById("portfolio").className = "portfolio darkmode2";
+        document.getElementById("card1").className = "card _1 darkmode2";
+        document.getElementById("card2").className = "subcard _1 darkmode2";
+        document.getElementById("card3").className = "subcard _2 darkmode2";
+        document.getElementById("desc").className = "desc lightmodep";
+        document.getElementById("aboutme_readmore").className = "readmore lightmodep";
+        document.getElementById("stat1").className = "lightmodep";
+        document.getElementById("stat2").className = "lightmodep";
+        document.getElementById("stat3").className = "lightmodep";
+        document.getElementById("aboutme_btnreadmore").className = "btnreadmore lightmodep";
+        document.getElementById("aboutme_dots").className = "dots lightmodep";
+        for (let i = 1; i <= 10; i++) {
+            document.getElementById("line" + i).style.fill = "#ffffff";
+        }
+        isDarkmode = true;
     }
-    var skills = document.getElementById("skills").getBoundingClientRect().top + window.scrollY;
-    if (currentScroll > skills){
-        document.getElementById("skills").className = "skills divfadein2";
-        setInterval(function() {document.getElementById("skill1").className = "divfadein"}, 100);
-        setInterval(function() {document.getElementById("skill2").className = "divfadein"}, 200);
-        setInterval(function() {document.getElementById("skill3").className = "divfadein"}, 300);
-        setInterval(function() {document.getElementById("skill4").className = "divfadein"}, 400);
-        setInterval(function() {document.getElementById("skill5").className = "divfadein"}, 500);
-        setInterval(function() {document.getElementById("skill6").className = "divfadein"}, 600);
-        setInterval(function() {document.getElementById("skill7").className = "divfadein"}, 700);
-        setInterval(function() {document.getElementById("skill8").className = "divfadein"}, 800);
-        setInterval(function() {document.getElementById("skill9").className = "divfadein"}, 900);
-        setInterval(function() {document.getElementById("skill10").className = "divfadein"}, 1000);
-    }
-    var stats = document.getElementById("stats").getBoundingClientRect().top + window.scrollY;
-    if (currentScroll > stats){
-        document.getElementById("stats").className = "divfadein2";
-    }
-    var slideshow = document.getElementById("slideshow").getBoundingClientRect().top + window.scrollY;
-    currentScroll = window.scrollY + window.scrollY * 0.4;
-    if(currentScroll > slideshow){
-        document.getElementById("slideshow").className = "img-slideshow divfadein2";
-        setInterval(function() {document.getElementById("card1").className = "card _1 divfadein"}, 0);
-    }
-    var slideshow2 = document.getElementById("slideshow2").getBoundingClientRect().top + window.scrollY;
-    if(currentScroll > slideshow2){
-        document.getElementById("slideshow2").className = "img-slideshow divfadein2";
-    }
-    var slideshow3 = document.getElementById("slideshow3").getBoundingClientRect().top + window.scrollY;
-    if(currentScroll > slideshow3){
-        document.getElementById("slideshow3").className = "img-slideshow divfadein2";
-        setInterval(function() {document.getElementById("card3").className = "card _1 divfadein"}, 0);
-    }
-    var slideshow4 = document.getElementById("slideshow4").getBoundingClientRect().top + window.scrollY;
-    if(currentScroll > slideshow4){
-        document.getElementById("slideshow4").className = "img-slideshow divfadein2";
-        setInterval(function() {document.getElementById("card4").className = "card _2 divfadein"}, 0);
+    else{
+        document.getElementById("body").className = "lightmode";
+        document.getElementById("sun").style.display = "none";
+        document.getElementById("moon").style.display = "block";
+        document.getElementById("portfolio").className = "portfolio lightmode2";
+        document.getElementById("card1").className = "card _1 lightmode2";
+        document.getElementById("card2").className = "subcard _1 lightmode2";
+        document.getElementById("card3").className = "subcard _2 lightmode2";
+        document.getElementById("desc").className = "desc darkmodep";
+        document.getElementById("aboutme_readmore").className = "readmore darkmodep";
+        document.getElementById("stat1").className = "darkmodep";
+        document.getElementById("stat2").className = "darkmodep";
+        document.getElementById("stat3").className = "darkmodep";
+        document.getElementById("aboutme_btnreadmore").className = "btnreadmore darkmodep";
+        document.getElementById("aboutme_dots").className = "dots darkmodep";
+        for (let i = 1; i <= 10; i++) {
+            document.getElementById("line" + i).style.fill = "#000000";
+        }
+        isDarkmode = false;
     }
 }
 
