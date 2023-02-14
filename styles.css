@@ -519,7 +519,11 @@ a{
 }
 .viewmodes button{
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #121212;
 }
 .viewmodes svg{
     height: 40px;
@@ -784,7 +788,7 @@ body>.fullscreen{
 
     border-radius: 15px;
     box-shadow: 0px 0px 5px 0px #121212;
-    background-image: linear-gradient(#eee 0%, #eee 98%, #ddd 100%);
+    background-color:#eee 0%;
     z-index: 2;
     padding-bottom: 25px;
 }
@@ -980,7 +984,7 @@ body>.fullscreen{
 .projects .subcard .options svg, .samples .subcard .options svg{
     position: relative;
     transform: translateY(2px);
-    fill: #ddd;
+    fill: #eee;
     z-index: 2;
 }
 .projects .subcard .options a, .samples .subcard .options a{
@@ -1025,7 +1029,7 @@ body>.fullscreen{
     font-stretch: condensed;
     font-size: 15px;
     font-weight: 200;
-    border: solid 1px #495b49;
+    border: solid 1px #478347;
     border-radius: 20px;
     color: rgba(0, 0, 0, 0.7);
     white-space: nowrap;
@@ -1220,13 +1224,16 @@ body>.fullscreen{
     .introduction svg{
         width: 25px;
         height: 25px;
-        transform: translate(3px, 3px);
+        transform: translate(2.5px, 3px);
     }
     .introduction svg:active{
-        transform: translate(3px, 5px);
+        transform: translate(2.5px, 5px);
     }
     .introduction a{
         padding: 15px 10px;
+    }
+    .viewmodes button{
+        transform: scale(0.8);
     }
     .portfolio{
         left: 50%;
@@ -1320,22 +1327,9 @@ body>.fullscreen{
         height: auto;
     }
     .projects .subcard .options a, .samples .subcard .options a{
+        transform: scale(0.8);
         margin: unset;
         margin-top: 50px;
-        padding: 5px;
-        border: unset;
-        background-image: unset;
-        transform: unset
-    } 
-    .projects .subcard .options a::before, .samples .subcard .options a::before{
-        background-image: unset;
-        transition: unset;
-    }
-    .projects .subcard .options a:active, .samples .subcard .options a:active{
-        background-image: unset
-    }
-    .projects .subcard .options svg, .samples .subcard .options svg{
-        fill: #121212;
     }
     .projects .subcard .options, .samples .subcard .options{
         margin: unset;

@@ -52,19 +52,18 @@ function SetViewMode(){
         document.getElementById("body").className = "darkmode";
         document.getElementById("sun").style.display = "block";
         document.getElementById("moon").style.display = "none";
-        document.getElementById("portfolio").className = "portfolio darkmode2";
-        document.getElementById("card1").className = "card _1 darkmode2";
-        document.getElementById("card2").className = "subcard _1 darkmode2";
-        document.getElementById("card3").className = "subcard _2 darkmode2";
-        document.getElementById("desc").className = "desc lightmodep";
-        document.getElementById("aboutme_readmore").className = "readmore lightmodep";
-        document.getElementById("stat1").className = "lightmodep";
-        document.getElementById("stat2").className = "lightmodep";
-        document.getElementById("stat3").className = "lightmodep";
-        document.getElementById("aboutme_btnreadmore").className = "btnreadmore lightmodep";
-        document.getElementById("aboutme_dots").className = "dots lightmodep";
+        var card = document.getElementsByClassName("card-viewmode");
+        for (let i = 0; i < card.length; i++) {
+            card[i].classList.remove("lightmode2");
+            card[i].className += " darkmode2";
+        }
         for (let i = 1; i <= 10; i++) {
             document.getElementById("line" + i).style.fill = "#ffffff";
+        }
+        var text = document.getElementsByClassName("text-viewmode");
+        for(let i = 0; i < text.length; i++){
+            text[i].classList.remove("darkmodep");
+            text[i].className += " lightmodep";
         }
         isDarkmode = true;
     }
@@ -72,19 +71,18 @@ function SetViewMode(){
         document.getElementById("body").className = "lightmode";
         document.getElementById("sun").style.display = "none";
         document.getElementById("moon").style.display = "block";
-        document.getElementById("portfolio").className = "portfolio lightmode2";
-        document.getElementById("card1").className = "card _1 lightmode2";
-        document.getElementById("card2").className = "subcard _1 lightmode2";
-        document.getElementById("card3").className = "subcard _2 lightmode2";
-        document.getElementById("desc").className = "desc darkmodep";
-        document.getElementById("aboutme_readmore").className = "readmore darkmodep";
-        document.getElementById("stat1").className = "darkmodep";
-        document.getElementById("stat2").className = "darkmodep";
-        document.getElementById("stat3").className = "darkmodep";
-        document.getElementById("aboutme_btnreadmore").className = "btnreadmore darkmodep";
-        document.getElementById("aboutme_dots").className = "dots darkmodep";
+        var card = document.getElementsByClassName("card-viewmode");
+        for (let i = 0; i < card.length; i++) {
+            card[i].classList.remove("darkmode2");
+            card[i].className += " lightmode2";
+        }
         for (let i = 1; i <= 10; i++) {
             document.getElementById("line" + i).style.fill = "#000000";
+        }
+        var text = document.getElementsByClassName("text-viewmode");
+        for(let i = 0; i < text.length; i++){
+            text[i].classList.remove("lightmodep");
+            text[i].className += " darkmodep";
         }
         isDarkmode = false;
     }

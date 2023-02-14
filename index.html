@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="viewmodes">
-            <button onclick="SetViewMode()">
+            <button onclick="SetViewMode()" class="card-viewmode">
                 <svg class="moon" id="moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_429_11017)">
                         <path d="M20.9955 11.7115L22.2448 11.6721C22.2326 11.2847 22.0414 10.9249 21.7272 10.698C21.413 10.4711 21.0113 10.4029 20.6397 10.5132L20.9955 11.7115ZM12.2885 3.00454L13.4868 3.36028C13.5971 2.98873 13.5289 2.58703 13.302 2.2728C13.0751 1.95857 12.7153 1.76736 12.3279 1.75516L12.2885 3.00454ZM20.6397 10.5132C20.1216 10.667 19.5716 10.75 19 10.75V13.25C19.815 13.25 20.6046 13.1314 21.3512 12.9098L20.6397 10.5132ZM19 10.75C15.8244 10.75 13.25 8.17564 13.25 5H10.75C10.75 9.55635 14.4437 13.25 19 13.25V10.75ZM13.25 5C13.25 4.42841 13.333 3.87841 13.4868 3.36028L11.0902 2.64879C10.8686 3.39542 10.75 4.18496 10.75 5H13.25ZM12 4.25C12.0834 4.25 12.1665 4.25131 12.2492 4.25392L12.3279 1.75516C12.219 1.75173 12.1097 1.75 12 1.75V4.25ZM4.25 12C4.25 7.71979 7.71979 4.25 12 4.25V1.75C6.33908 1.75 1.75 6.33908 1.75 12H4.25ZM12 19.75C7.71979 19.75 4.25 16.2802 4.25 12H1.75C1.75 17.6609 6.33908 22.25 12 22.25V19.75ZM19.75 12C19.75 16.2802 16.2802 19.75 12 19.75V22.25C17.6609 22.25 22.25 17.6609 22.25 12H19.75ZM19.7461 11.7508C19.7487 11.8335 19.75 11.9166 19.75 12H22.25C22.25 11.8903 22.2483 11.781 22.2448 11.6721L19.7461 11.7508Z" fill="#292929"/>
@@ -161,23 +161,23 @@
                 </button>
             </div>
         </div>
-        <div class="portfolio" id="portfolio">
+        <div class="portfolio card-viewmode" id="portfolio">
             <div class="about" id="about">
                 <div class="header">
                     <h1>About Me</h1>
                     <h4>Know me better!</h4>
                 </div>
                 <div class="card_content">
-                    <div class="card _1" id="card1">
+                    <div class="card _1 card-viewmode" id="card1">
                         <div class="content" id="content">
                             <div class="content-header">
                                 <p class="me"><img src="images/me.jpg" width="180" height="180"></p>
                                 <h1>Who am I?</h1>
                             </div>
                             <div class="content-body">
-                                <p class="desc" id="desc">I'm Christopher Cruz a BS Information Technology graduate.<span class="dots" id="aboutme_dots">...</span>
-                                    <button class="btnreadmore" id="aboutme_btnreadmore" onclick="Readmore('aboutme')">Read more</button>
-                                    <span class="readmore" id="aboutme_readmore"> I specialize in developing web and game applications for desktop and mobile platforms. During my free time, I like listening to music, playing mobile games, and honing my skills in software development. I am currently open to working in an entry-level position.</span>
+                                <p class="desc text-viewmode" id="desc">I'm Christopher Cruz a BS Information Technology graduate.<span class="dots text-viewmode" id="aboutme_dots">...</span>
+                                    <button class="btnreadmore text-viewmode" id="aboutme_btnreadmore" onclick="Readmore('aboutme')">Read more</button>
+                                    <span class="readmore text-viewmode" id="aboutme_readmore"> I specialize in developing web and game applications for desktop and mobile platforms. During my free time, I like listening to music, playing mobile games, and honing my skills in software development. I am currently open to working in an entry-level position.</span>
                                 </p>
                                   <a href="https://docs.google.com/document/d/1jrgVScJWbltdxpNB0W7tNoSjrs8t2c7YDi81kU4lUNY/edit" target="_blank">
                                     <button class="btn_resume" id="btn_resume">View Resume 
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                     <div class="card _2">
-                        <div class="subcard _1" id="card2">
+                        <div class="subcard _1 card-viewmode" id="card2">
                             <div id="skills">
                                 <div class="content-header sub">
                                     <svg class="image" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -282,7 +282,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="subcard _2" id="card3">
+                        <div class="subcard _2 card-viewmode" id="card3">
                             <div id="stats">
                                 <div class="content-header sub">
                                     <svg class="image" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -304,13 +304,13 @@
                                 </div>
                                 <div class="stats">
                                     <div class="_1">
-                                        <p id="stat1"><b>3</b><br>Repositories</p>
+                                        <p class="text-viewmode"><b>3</b><br>Repositories</p>
                                     </div>
                                     <div class="_2">
-                                        <p id="stat2"><b>2</b><br>Projects</p>
+                                        <p class="text-viewmode"><b>2</b><br>Projects</p>
                                     </div>
                                     <div class="_3">
-                                        <p id="stat3"><b>1</b><br>Certifications</p>
+                                        <p class="text-viewmode"><b>1</b><br>Certifications</p>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +324,7 @@
                     <h4>Some of my works.</h4>
                 </div>
                 <div class="card _1" id="card1">
-                    <div class="subcard _1">
+                    <div class="subcard _1" id="subcard1">
                         <div class="content-header">
                             <div class="image_center">
                                 <div class="img-slideshow" id="slideshow">
@@ -377,18 +377,18 @@
                                 <h1>Cry of Gaia</h1>
                             </div>
                         </div>
-                        <div class="bottom-container">
+                        <div class="bottom-container" id="bottom-container">
                             <div class="desc" id="desc">
-                                <p>Cry of Gaia is an Android 2D action game that aims to spread environmental awareness 
-                                    <span id="cry_dots" class="dots">...</span> 
-                                    <button id="cry_btnreadmore" class="btnreadmore" onclick="Readmore('cryofgaia')">Read more</button> 
-                                    <span id="cry_readmore" class="readmore"> through completing environmental-related tasks. The game was developed as Capstone Project using the Unity game engine and C# as the programming language.</span>
+                                <p class="text-viewmode">Cry of Gaia is an Android 2D action game that aims to spread environmental awareness 
+                                    <span id="cry_dots" class="dots text-viewmode">...</span> 
+                                    <button id="cry_btnreadmore" class="btnreadmore text-viewmode" onclick="Readmore('cryofgaia')">Read more</button> 
+                                    <span id="cry_readmore" class="readmore text-viewmode"> through completing environmental-related tasks. The game was developed as Capstone Project using the Unity game engine and C# as the programming language.</span>
                                 </p>
                             </div>
                             <div class="tags" id="tags">
-                                <p>unity</p>
-                                <p>c#</p>
-                                <p>android</p>
+                                <p class="text-viewmode">unity</p>
+                                <p class="text-viewmode">c#</p>
+                                <p class="text-viewmode">android</p>
                             </div>
                             <div class="options" id="options">
                                 <a href="https://github.com/SircCruz/CryOfGaia/releases/download/v1.0.4d/Cry.Of.Gaia.apk">
@@ -472,16 +472,16 @@
                         </div>
                         <div class="bottom-container">
                             <div class="desc" id="desc2">
-                                <p>sirccruz.github.io is my portfolio website which features a collection of my projects
-                                    <span id="sirc_dots" class="dots">...</span>
-                                    <button id="sirc_btnreadmore" class="btnreadmore" onclick="Readmore('sirccruz')">Read more</button> 
-                                    <span id="sirc_readmore" class="readmore">, samples, and skills. The website was developed using HTML, vanilla CSS and JavaScript. </span>
+                                <p class="text-viewmode">sirccruz.github.io is my portfolio website which features a collection of my projects
+                                    <span id="sirc_dots" class="dots text-viewmode">...</span>
+                                    <button id="sirc_btnreadmore" class="btnreadmore text-viewmode" onclick="Readmore('sirccruz')">Read more</button> 
+                                    <span id="sirc_readmore" class="readmore text-viewmode">, samples, and skills. The website was developed using HTML, vanilla CSS and JavaScript. </span>
                                 </p>
                             </div>
                             <div class="tags" id="tags2">
-                                <p>html</p>
-                                <p>css</p>
-                                <p>javascript</p>
+                                <p class="text-viewmode">html</p>
+                                <p class="text-viewmode">css</p>
+                                <p class="text-viewmode">javascript</p>
                             </div>
                             <div class="options" id="options2">
                                 <a href="https:sirccruz.github.io">
@@ -563,18 +563,18 @@
                         </div>
                         <div class="bottom-container">
                             <div class="desc" id="desc3">
-                                <p>My aim for developing SocialMediaApp is to learn ASP .NET 6.0 MVC architecture.
-                                    <span id="social_dots" class="dots">...</span>
-                                    <button id="social_btnreadmore" class="btnreadmore" onclick="Readmore('socialmedia')">Read more</button> 
-                                    <span id="social_readmore" class="readmore"> The website can perform asynchronous CRUD operations using MySQL as the local database.</span>
+                                <p class="text-viewmode">My aim for developing SocialMediaApp is to learn ASP .NET 6.0 MVC architecture.
+                                    <span id="social_dots" class="dots text-viewmode">...</span>
+                                    <button id="social_btnreadmore" class="btnreadmore text-viewmode" onclick="Readmore('socialmedia')">Read more</button> 
+                                    <span id="social_readmore" class="readmore text-viewmode"> The website can perform asynchronous CRUD operations using MySQL as the local database.</span>
                                 </p>
                             </div>
                             <div class="tags" id="tags3">
-                                <p>.net</p>
-                                <p>mvc</p>
-                                <p>crud</p>
-                                <p>mysql</p>
-                                <p>ajax</p>
+                                <p class="text-viewmode">.net</p>
+                                <p class="text-viewmode">mvc</p>
+                                <p class="text-viewmode">crud</p>
+                                <p class="text-viewmode">mysql</p>
+                                <p class="text-viewmode">ajax</p>
                             </div>
                             <div class="options" id="options3">
                                 <a href="https://github.com/SircCruz/SocialMediaApp" target="_blank">
@@ -638,17 +638,17 @@
                                 </div>
                             </div>
                             <div class="title" id="title2">
-                                <p><h1>sirccruz.github.io <b style="font-size: 15px; color: #ddd;">(v1)</b></h1></p>
+                                <p class="text-viewmode"><h1>sirccruz.github.io <b style="font-size: 15px; color: #ddd;">(v1)</b></h1></p>
                             </div>
                         </div>
                         <div class="bottom-container">
                             <div class="desc" id="desc2">
-                                <p>sirccruz.github.io (v1) is my first portfolio website before it got a major overhaul in design.</p>
+                                <p class="descp text-viewmode">sirccruz.github.io (v1) is my first portfolio website before it got a major overhaul in design.</p>
                             </div>
                             <div class="tags" id="tags2">
-                                <p>html</p>
-                                <p>css</p>
-                                <p>javascript</p>
+                                <p class="text-viewmode">html</p>
+                                <p class="text-viewmode">css</p>
+                                <p class="text-viewmode">javascript</p>
                             </div>
                             <div class="options" id="options2">
                                 <a href="https://github.com/SircCruz/sirccruz.github.io-v1-" target="_blank">
@@ -719,13 +719,13 @@
                         </div>
                         <div class="bottom-container">
                             <div class="desc" id="desc2">
-                                <p>Miniblog is a small website that is developed using PHP. It can perform asychronous CRUD operations using MySQL as the local database.</p>
+                                <p class="descp text-viewmode">Miniblog is a small website that is developed using PHP. It can perform asychronous CRUD operations using MySQL as the local database.</p>
                             </div>
                             <div class="tags" id="tags2">
-                                <p>php</p>
-                                <p>mysql</p>
-                                <p>ajax</p>
-                                <p>crud</p>
+                                <p class="text-viewmode">php</p>
+                                <p class="text-viewmode">mysql</p>
+                                <p class="text-viewmode">ajax</p>
+                                <p class="text-viewmode">crud</p>
                             </div>
                             <div class="options" id="options2">
                                 <a href="https://github.com/SircCruz/miniblog" target="_blank">
@@ -832,7 +832,7 @@
                         </a>
                     </div>
                 <a class="footer-link" href="https://docs.google.com/document/d/1jrgVScJWbltdxpNB0W7tNoSjrs8t2c7YDi81kU4lUNY/edit" target="_blank">View Resume</a>
-                <p>Created with <b>&lt;/&gt;</b> by SircCruz.</p>
+                <p class="text-viewmode"> Created with <b class="text-viewmode">&lt;/&gt;</b> by SircCruz.</p>
                 </div>
             </div>
         </div>
